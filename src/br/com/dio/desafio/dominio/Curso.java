@@ -21,12 +21,16 @@ public class Curso extends Conteudo{
         this.cargaHoraria = cargaHoraria;
     }
 
+    private String status(){
+        return "\nMentoria{" +
+                "\n\tTitulo='" + getTitulo() + '\'' +
+                "\n\tTdescricao='" + getDescricao() + '\'' +
+                "\n\tCarga Horaria=" + getCargaHoraria() +
+                "\n\t}\n";
+    }
+
     @Override
     public String toString() {
-        return "Curso{" +
-                "titulo='" + getTitulo() + '\'' +
-                ", descricao='" + getDescricao() + '\'' +
-                ", cargaHoraria=" + cargaHoraria +
-                '}';
+        return status();
     }
 }
